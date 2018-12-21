@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-import { FormGroup, Validators } from '@angular/forms';
+import { IonicPage, NavController, NavParams, AlertController  } from 'ionic-angular';
+import { FormGroup, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'page-home',
@@ -11,10 +11,9 @@ export class HomePage {
   private person: FormGroup;
   private apagar: FormGroup;
   private list = [];
-  formBuilder: any;
-  alertController: any;
 
-  constructor(public navCtrl: NavController) {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, public alertController : AlertController, public formBuilder: FormBuilder) {
 
     this.person = this.formBuilder.group({
       id: [''],
