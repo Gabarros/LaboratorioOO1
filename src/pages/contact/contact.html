@@ -1,17 +1,23 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      Informações Pessoais
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+
+    <ion-card>
+
+        <img [src]=pessoa.imagem id="foto">
+
+        <ion-item id="informacao">
+          <h2>{{pessoa.nome}}</h2>
+          <p>{{pessoa.matricula}}</p>
+        </ion-item>
+       
+        
+  </ion-card>
+ 
 </ion-content>
